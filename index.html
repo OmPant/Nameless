@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Namless — Om Pant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         CUSTOM CURSOR
+    ====================================== -->
+
+    <div class="custom-cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+    </div>
+
+
+    <!-- =====================================
+         CINEMATIC ENTRY SCREEN
+    ====================================== -->
+
+  <!-- =========================================
+     NAMELESS CYBER ACCESS ENTRY
+========================================= -->
+
+<div class="entry-screen" id="entryScreen">
+
+    <!-- BACKGROUND -->
+    <div class="entry-background">
+
+        <div class="entry-grid"></div>
+        <div class="entry-scanlines"></div>
+        <div class="entry-noise"></div>
+
+        <div class="entry-glow"></div>
+
+        <!-- floating particles -->
+        <div class="entry-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- TOP BAR -->
+
+    <div class="access-topbar">
+
+        <div class="access-brand">
+            <span class="access-dot"></span>
+            NAMELESS
+        </div>
+
+        <div class="access-top-center">
+            WELCOME
+        </div>
+
+        <div class="access-public">
+            PUBLIC / EXPERIMENT
+            <span class="menu-lines">☰</span>
+        </div>
+
+    </div>
+
+
+    <!-- LEFT SYSTEM PANEL -->
+
+    <div class="access-panel access-left">
+
+        <div class="panel-title">
+            SYSTEM INITIALISING...
+        </div>
+
+        <div class="system-line">
+            <span>●</span>
+            CORE MODULE
+            <b>OK</b>
+        </div>
+
+        <div class="system-line">
+            <span>●</span>
+            VISUAL INTERFACE
+            <b>OK</b>
+        </div>
+
+        <div class="system-line">
+            <span>●</span>
+            NEURAL RENDERER
+            <b>OK</b>
+        </div>
+
+        <div class="system-line">
+            <span>●</span>
+            SECURITY PROTOCOL
+            <b>OK</b>
+        </div>
+
+        <div class="system-line">
+            <span>●</span>
+            PORTFOLIO SYSTEM
+            <b>OK</b>
+        </div>
+
+
+        <div class="connection-box">
+
+            <div class="panel-title">
+                ESTABLISHING CONNECTION...
+            </div>
+
+            <div class="connection-bar">
+                <div id="accessProgress"></div>
+            </div>
+
+            <div class="connection-percent">
+                <span id="accessPercent">00</span>%
+            </div>
+
+        </div>
+
+
+        <div class="identity-box">
+
+            <div>
+                &gt; VERIFYING IDENTITY...
+            </div>
+
+            <div>
+                &gt; USER : GUEST
+            </div>
+
+            <div>
+                &gt; CLEARANCE : LIMITED
+            </div>
+
+            <div>
+                &gt; ACCESS : <span id="accessState">PENDING</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SYSTEM PANEL -->
+
+    <div class="access-panel access-right">
+
+        <div class="panel-title">
+            SCANNING ENVIRONMENT...
+        </div>
+
+        <div class="scan-window">
+
+            <div class="scan-crosshair"></div>
+
+            <div class="scan-circle"></div>
+
+        </div>
+
+        <div class="scan-status">
+            ENVIRONMENT : STABLE
+        </div>
+
+
+        <div class="security-section">
+
+            <div class="panel-title">
+                SECURITY LAYERS
+            </div>
+
+            <div class="security-line">
+                <span>FIREWALL</span>
+                <i></i>
+            </div>
+
+            <div class="security-line">
+                <span>ENCRYPTION</span>
+                <i></i>
+            </div>
+
+            <div class="security-line">
+                <span>INTRUSION CHECK</span>
+                <i></i>
+            </div>
+
+            <div class="security-line">
+                <span>THREAT SCAN</span>
+                <i></i>
+            </div>
+
+        </div>
+
+
+        <div class="protocol-section">
+
+            <div class="panel-title">
+                ACCESS PROTOCOL
+            </div>
+
+            <div>
+                &gt; SEND REQUEST ... <span>OK</span>
+            </div>
+
+            <div>
+                &gt; VALIDATING ... <span>OK</span>
+            </div>
+
+            <div class="grant-line">
+                &gt; GRANTING ACCESS...
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CENTRAL CORE -->
+
+    <div class="entry-content">
+
+        <div class="entry-status">
+            DIGITAL WORLD / NODE 04
+        </div>
+
+
+        <div class="entry-core">
+
+            <div class="core-ring core-ring-1"></div>
+            <div class="core-ring core-ring-2"></div>
+            <div class="core-ring core-ring-3"></div>
+
+            <div class="core-orbit orbit-1"></div>
+            <div class="core-orbit orbit-2"></div>
+
+            <div class="core-sphere">
+
+                <div class="sphere-grid"></div>
+                <div class="sphere-light"></div>
+
+            </div>
+
+        </div>
+
+
+        <p class="entry-label">
+            A DIGITAL EXPERIENCE
+        </p>
+
+
+        <h1 class="entry-logo">
+            NAMELESS
+        </h1>
+
+
+        <p class="entry-subtitle">
+            PUBLIC / EXPERIMENT
+        </p>
+
+
+        <button
+            class="entry-button"
+            id="entryButton"
+            type="button"
+        >
+
+            <span id="entryButtonText">
+                REQUEST ACCESS...
+            </span>
+
+            <span class="entry-arrow">
+                ↗
+            </span>
+
+        </button>
+
+
+        <p class="entry-hint" id="entryHint">
+            CLICK TO INITIALISE
+        </p>
+
+    </div>
+
+
+    <!-- BOTTOM -->
+
+    <div class="access-bottom-left">
+
+        A DIGITAL PORTFOLIO<br>
+        BUILT ON CURIOSITY.
+
+    </div>
+
+
+    <div class="access-bottom-center">
+
+        "SOME WORLDS ARE NOT FOUND.<br>
+        THEY ARE ACCESSED."
+
+    </div>
+
+
+    <div class="access-bottom-right">
+
+        05 PROJECTS<br>
+        AND MORE...
+
+    </div>
+
+
+    <!-- ACCESS GRANTED -->
+
+    <div
+        class="access-granted"
+        id="accessGranted"
+    >
+
+        <div class="granted-line"></div>
+
+        <div class="granted-text">
+            ACCESS GRANTED
+        </div>
+
+        <div class="granted-sub">
+            ENTERING NAMELESS
+        </div>
+
+    </div>
+
+</div>
+
+
+    <!-- =====================================
+         CINEMATIC PORTAL TRANSITION
+    ====================================== -->
+
+    <div class="portal-transition" id="portalTransition">
+
+        <div class="portal-ring ring-one"></div>
+        <div class="portal-ring ring-two"></div>
+        <div class="portal-ring ring-three"></div>
+
+        <div class="portal-core"></div>
+
+        <div class="portal-text">
+            ENTERING
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         BACKGROUND
+    ====================================== -->
+
+    <div class="background">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="noise"></div>
+
+    </div>
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="navbar">
+
+        <a href="#home" class="brand">
+            Namless
+        </a>
+
+        <button class="menu-button" id="menuButton">
+
+            <span>MENU</span>
+
+            <div class="menu-icon">
+                <i></i>
+                <i></i>
+            </div>
+
+        </button>
+
+    </header>
+
+
+    <!-- =====================================
+         SIDE NAVIGATION
+    ====================================== -->
+
+    <aside class="side-nav">
+
+        <span class="side-line"></span>
+
+        <a href="#home" class="dot active"></a>
+        <a href="#about" class="dot"></a>
+        <a href="#projects" class="dot"></a>
+        <a href="#contact" class="dot"></a>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =================================
+             HERO
+        ================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    WELCOME TO MY WORLD
+                </p>
+
+                <h1>
+                    OM <span>PANT</span>
+                </h1>
+
+                <p class="role">
+                    DEVELOPER <span>/</span> CREATOR
+                </p>
+
+                <a href="#about" class="enter-button">
+
+                    <span>
+                        ENTER MY WORLD
+                    </span>
+
+                    <span class="arrow">
+                        ↗
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <!-- Decorative Orb -->
+
+            <div class="orb">
+                <div class="orb-inner"></div>
+            </div>
+
+
+            <!-- Hero Footer -->
+
+            <div class="hero-bottom">
+
+                <span>
+                    INDIA
+                </span>
+
+                <span>
+                    SCROLL TO EXPLORE ↓
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             ABOUT
+        ================================== -->
+
+        <section class="about-section" id="about">
+
+            <div class="section-number about-reveal">
+                01 / ABOUT
+            </div>
+
+
+            <div class="about-content">
+
+
+                <!-- About Title -->
+
+                <div class="about-title about-reveal">
+
+                    <p class="small-label">
+                        A LITTLE ABOUT ME
+                    </p>
+
+                    <h2>
+
+                        I BUILD
+
+                        <span>
+                            THINGS
+                        </span>
+
+                        THAT MATTER.
+
+                    </h2>
+
+                </div>
+
+
+                <!-- About Description -->
+
+                <div class="about-text about-reveal">
+
+                    <p>
+                        I'm Om Pant, a developer and creator
+                        who enjoys turning ideas into digital
+                        experiences.
+                    </p>
+
+                    <p>
+                        I explore software development,
+                        technology, artificial intelligence
+                        and creative ways of solving problems.
+                    </p>
+
+                    <a href="#projects" class="text-link">
+
+                        DISCOVER MY WORK
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- About Footer -->
+
+            <div class="about-footer about-reveal">
+
+                <span>
+                    BASED IN INDIA
+                </span>
+
+                <span>
+                    SCROLL ↓
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             PROJECTS
+        ================================== -->
+
+        <!-- =================================
+     PROJECTS
+================================== -->
+
+<section class="projects-section" id="projects">
+
+    <div class="projects-heading">
+
+        <span>02 / SELECTED WORK</span>
+
+        <p>
+            Things I've built, experimented with,
+            and explored along the way.
+        </p>
+
+    </div>
+
+
+    <div class="projects-list">
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="project-item">
+
+            <div class="project-meta">
+                <span>01</span>
+                <span>PUBLIC / GAME</span>
+            </div>
+
+            <div class="project-main">
+
+                <h2>
+                    SUPPLY<br>
+                    <span>MISSION 2</span>
+                </h2>
+
+                <div class="project-description">
+
+                    <p>
+                        A JavaScript browser game built
+                        around interactive gameplay and
+                        experimentation.
+                    </p>
+
+                   <a href="https://ompant.github.io/SUPPLY-MISSION---2/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="project-link">
+                            VIEW PROJECT ↗
+                        </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="project-item">
+
+            <div class="project-meta">
+                <span>02</span>
+                <span>PUBLIC / GAME</span>
+            </div>
+
+            <div class="project-main">
+
+                <h2>
+                    MONKEY GO<br>
+                    <span>HAPPY</span>
+                </h2>
+
+                <div class="project-description">
+
+                    <p>
+                        An interactive JavaScript project
+                        exploring browser-based gameplay.
+                    </p>
+
+                    <a href="https://ompant.github.io/Monkey_Go_Happy/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        VIEW PROJECT ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="project-item">
+
+            <div class="project-meta">
+                <span>03</span>
+                <span>PUBLIC / GAME</span>
+            </div>
+
+            <div class="project-main">
+
+                <h2>
+                    TREX<br>
+                    <span></span>
+                </h2>
+
+                <div class="project-description">
+
+                    <p>
+                        A browser game experiment created
+                        using JavaScript.
+                    </p>
+
+                    <a href="https://ompant.github.io/trex-/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        VIEW PROJECT ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 04 -->
+
+        <article class="project-item">
+
+            <div class="project-meta">
+                <span>04</span>
+                <span>PUBLIC / EXPERIMENT</span>
+            </div>
+
+            <div class="project-main">
+
+                <h2>
+                    NEWTON'S<br>
+                    <span>CRADLE</span>
+                </h2>
+
+                <div class="project-description">
+
+                    <p>
+                        An interactive physics-inspired
+                        browser experiment.
+                    </p>
+
+                    <a href="https://ompant.github.io/NEWTON-S-CRADLE/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        VIEW PROJECT ↗
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+       <!-- =========================================
+     ELARA PRIVATE PROJECT
+========================================= -->
+
+<article class="project-item private-project">
+
+    <div class="project-meta">
+        <span>05</span>
+        <span>PRIVATE / CLOSED SOURCE</span>
+    </div>
+
+    <div class="project-main">
+
+        <h2>
+            ELA<span>RA</span>
+        </h2>
+
+        <div class="project-description">
+
+            <p>
+                A private personal AI system exploring
+                intelligent interaction, memory,
+                security and controlled automation.
+            </p>
+
+            <button class="private-label" id="elaraViewButton">
+                VIEW ELARA ↗
+            </button>
+
+        </div>
+
+    </div>
+
+</article>
+
+</div>
+
+<div class="projects-footer">
+
+    <span>
+        SELECTED WORK
+    </span>
+
+    <span>
+        05 PROJECTS
+    </span>
+
+</div>
+
+</section>
+
+
+
+        <!-- =================================
+             CONTACT
+        ================================== -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="section-number">
+                03 / CONTACT
+            </div>
+
+            <div class="contact-content">
+
+                <p class="small-label">
+                    ESTABLISH CONNECTION
+                </p>
+
+                <h2>
+                    LET'S BUILD
+                    <span>SOMETHING.</span>
+                </h2>
+
+                <p class="contact-description">
+                    Have an idea, project, collaboration,
+                    or simply want to connect?
+                </p>
+
+                <div class="contact-actions">
+
+                    <!-- Replace YOUR_EMAIL with your real email -->
+                  <div class="contact-form">
+
+    <div class="form-header">
+        <span>TRANSMISSION</span>
+        <span>01 / 01</span>
+    </div>
+
+    <form action="https://formspree.io/f/mwlpyylq"
+      method="POST">
+
+        <div class="form-row">
+
+            <div class="form-field">
+                <label for="name">YOUR NAME</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    placeholder="ENTER YOUR NAME"
+                    required>
+            </div>
+
+
+            <div class="form-field">
+                <label for="email">YOUR EMAIL</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    placeholder="ENTER YOUR EMAIL"
+                    required>
+            </div>
+
+        </div>
+
+
+        <div class="form-field">
+
+            <label for="message">YOUR MESSAGE</label>
+
+            <textarea
+                id="message"
+                name="Message"
+                rows="5"
+                placeholder="TELL ME WHAT YOU'RE THINKING..."
+                required></textarea>
+
+        </div>
+
+
+        <button type="submit" class="form-submit">
+
+            <span>SEND TRANSMISSION</span>
+
+            <span class="submit-arrow">↗</span>
+
+        </button>
+
+    </form>
+
+</div>
+
+                    <a
+                        href="https://github.com/ompant"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-social"
+                    >
+                        GITHUB <span>↗</span>
+                    </a>
+
+                    <!-- Replace these two placeholders with your real profiles -->
+                    <a href="https://www.linkedin.com/in/the-nameless"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-social">
+                                LINKEDIN <span>↗</span>
+                            </a>
+
+                    <a
+                        href="YOUR_INSTAGRAM_URL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contact-social"
+                    >
+                        INSTAGRAM <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="contact-footer">
+                <span>INDIA</span>
+                <span>NAMELESS / 2026</span>
+                <span>CONNECTION READY</span>
+            </div>
+
+        </section>
+
+<!-- =========================================
+     ELARA INFORMATION MODAL
+========================================= -->
+
+<div class="elara-modal" id="elaraModal">
+
+    <!-- Dark background -->
+    <div class="elara-modal-backdrop"></div>
+
+    <!-- =========================================
+     ELARA CINEMATIC MODAL
+========================================= -->
+
+<div class="elara-modal" id="elaraModal">
+
+    <div class="elara-modal-backdrop"></div>
+
+    <!-- VFX SYSTEM -->
+    <div class="elara-vfx">
+
+        <div class="elara-scanlines"></div>
+
+        <div class="elara-particles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="elara-system">
+
+            <div class="elara-ring ring-a"></div>
+            <div class="elara-ring ring-b"></div>
+            <div class="elara-ring ring-c"></div>
+
+            <div class="elara-neural">
+                <i></i><i></i><i></i><i></i>
+                <i></i><i></i><i></i><i></i>
+            </div>
+
+            <div class="elara-core">
+                <div class="core-inner"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INFORMATION PANEL -->
+
+    <div class="elara-modal-box">
+
+        <button
+            class="elara-modal-close"
+            id="elaraClose"
+            type="button">
+            CLOSE ×
+        </button>
+
+
+        <div class="elara-modal-header">
+
+            <span>PRIVATE PROJECT</span>
+
+            <span>ELARA / 01</span>
+
+        </div>
+
+
+        <div class="elara-modal-content">
+
+            <p class="elara-modal-label">
+                PERSONAL AI SYSTEM
+            </p>
+
+            <h2>
+                ELA<span>RA</span>
+            </h2>
+
+            <p class="elara-modal-intro">
+                A private personal AI system exploring
+                intelligent interaction, controlled memory,
+                security and authorised automation.
+            </p>
+
+
+            <div class="elara-modal-line"></div>
+
+
+            <div class="elara-modal-info">
+
+                <div>
+                    <span>01</span>
+                    <h3>INTELLIGENCE</h3>
+                    <p>
+                        Designed to understand user requests
+                        and assist with different tasks.
+                    </p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>MEMORY</h3>
+                    <p>
+                        A controlled memory system for
+                        storing user-defined information.
+                    </p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>SECURITY</h3>
+                    <p>
+                        Permission and privacy controls are
+                        built into the system.
+                    </p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <h3>AUTOMATION</h3>
+                    <p>
+                        Actions are designed to happen only
+                        when explicitly authorised.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="elara-modal-status">
+
+                <span>STATUS</span>
+
+                <strong>
+                    PRIVATE / CLOSED SOURCE
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        <!-- Main content -->
+
+        <div class="elara-modal-content">
+
+            <p class="elara-modal-label">
+                PERSONAL AI SYSTEM
+            </p>
+
+
+            <h2>
+                ELA<span>RA</span>
+            </h2>
+
+
+            <p class="elara-modal-intro">
+
+                ELARA is a private personal AI system
+                exploring intelligent interaction,
+                controlled memory, security and
+                authorised automation.
+
+            </p>
+
+
+            <div class="elara-modal-line"></div>
+
+
+            <!-- Capabilities -->
+
+            <div class="elara-modal-info">
+
+
+                <!-- Intelligence -->
+
+                <div>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        INTELLIGENCE
+                    </h3>
+
+                    <p>
+                        Designed to understand user requests
+                        and assist with different tasks.
+                    </p>
+
+                </div>
+
+
+                <!-- Memory -->
+
+                <div>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        MEMORY
+                    </h3>
+
+                    <p>
+                        A controlled memory system for
+                        storing user-defined information.
+                    </p>
+
+                </div>
+
+
+                <!-- Security -->
+
+                <div>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        SECURITY
+                    </h3>
+
+                    <p>
+                        Permission and privacy controls are
+                        built into the system.
+                    </p>
+
+                </div>
+
+
+                <!-- Automation -->
+
+                <div>
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        AUTOMATION
+                    </h3>
+
+                    <p>
+                        Actions are designed to happen only
+                        when explicitly authorised.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- Status -->
+
+            <div class="elara-modal-status">
+
+                <span>
+                    STATUS
+                </span>
+
+                <strong>
+                    PRIVATE / CLOSED SOURCE
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="script.js"></script>
+
+    <!-- =========================================
+     ELARA CINEMATIC INFORMATION MODAL
+========================================= -->
+
+<div class="elara-modal" id="elaraModal">
+
+    <!-- Background -->
+    <div class="elara-modal-backdrop"></div>
+
+
+    <!-- VFX -->
+    <div class="elara-vfx">
+
+        <div class="elara-scanlines"></div>
+
+        <div class="elara-particles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- AI CORE -->
+
+        <div class="elara-system">
+
+            <div class="elara-ring ring-a"></div>
+            <div class="elara-ring ring-b"></div>
+            <div class="elara-ring ring-c"></div>
+
+            <div class="elara-neural">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+            <div class="elara-core">
+                <div class="core-inner"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================
+         INFORMATION PANEL
+    ====================================== -->
+
+    <div class="elara-modal-box">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="elara-modal-close"
+            id="elaraClose"
+            type="button"
+        >
+            CLOSE ×
+        </button>
+
+
+        <!-- HEADER -->
+
+        <div class="elara-modal-header">
+
+            <span>
+                PRIVATE PROJECT
+            </span>
+
+            <span>
+                ELARA / 01
+            </span>
+
+        </div>
+
+
+        <!-- CONTENT -->
+
+        <div class="elara-modal-content">
+
+
+            <p class="elara-modal-label">
+                PERSONAL AI SYSTEM
+            </p>
+
+
+            <h2>
+                ELA<span>RA</span>
+            </h2>
+
+
+            <p class="elara-modal-intro">
+
+                ELARA is a private personal AI system
+                exploring intelligent interaction,
+                controlled memory, security and
+                authorised automation.
+
+            </p>
+
+
+            <div class="elara-modal-line"></div>
+
+
+            <!-- CAPABILITIES -->
+
+            <div class="elara-modal-info">
+
+
+                <!-- INTELLIGENCE -->
+
+                <div>
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        INTELLIGENCE
+                    </h3>
+
+                    <p>
+                        Designed to understand user
+                        requests and assist with
+                        different tasks.
+                    </p>
+
+                </div>
+
+
+                <!-- MEMORY -->
+
+                <div>
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        MEMORY
+                    </h3>
+
+                    <p>
+                        A controlled memory system
+                        for storing user-defined
+                        information.
+                    </p>
+
+                </div>
+
+
+                <!-- SECURITY -->
+
+                <div>
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        SECURITY
+                    </h3>
+
+                    <p>
+                        Permission and privacy controls
+                        are central to the system.
+                    </p>
+
+                </div>
+
+
+                <!-- AUTOMATION -->
+
+                <div>
+
+                    <span>
+                        04
+                    </span>
+
+                    <h3>
+                        AUTOMATION
+                    </h3>
+
+                    <p>
+                        Actions are designed to happen
+                        only when explicitly authorised.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="elara-modal-status">
+
+                <span>
+                    STATUS
+                </span>
+
+                <strong>
+                    PRIVATE / CLOSED SOURCE
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
